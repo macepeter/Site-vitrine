@@ -20,9 +20,15 @@ body {
   background: rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
 }
-footer{
-  font-family: 'Segoe UI', sans-serif;
-  color: white;
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    color: rgb(151, 117, 6);
+    background: rgba(0, 0, 0, 0.4); /* optionnel pour lisibilité */
+
 }
 .navbar .logo {
   font-size: 1.5em;
