@@ -27,7 +27,7 @@ body {
     text-align: center;
     padding: 15px 0;
     color: rgb(151, 117, 6);
-    background: rgba(0, 0, 0, 0.4); /* optionnel pour lisibilité */
+    background: rgba(0, 0, 0, 0.4); /*optionnel pour lisibilité */
 
 }
 .navbar .logo {
