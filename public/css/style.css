@@ -28,7 +28,6 @@ body {
     text-align: center;
     padding: 5px 0;
     color: rgb(206, 176, 79);
-    background: rgba(0, 0, 0, 0.1); /*optionnel pour lisibilité */
     height: 7rem;
 }
 .navbar .logo {
