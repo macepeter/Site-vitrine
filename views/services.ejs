@@ -2,7 +2,19 @@
 <link rel="stylesheet" href="/css/services.css">
 
 <%- include('../partials/header') %>
+<section class="solutions">
+  <h2>Nos solutions</h2>
 
+  <div class="solutions-grid">
+    <% solutions.forEach(s => { %>
+      <div class="solution-card">
+        <div class="icon"><%= s.icon %></div>
+        <h3><%= s.title %></h3>
+        <p><%= s.desc %></p>
+      </div>
+    <% }) %>
+  </div>
+</section>
 
 <%- include('../partials/footer') %>
 

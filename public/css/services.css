@@ -8,7 +8,64 @@ body {
     left: 0;
     z-index: 3000;
     background: rgba(0, 0, 0, 0.0);
+
 }
+
+/* Section */
+.solutions {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.solutions h2 {
+  font-size: 2.5rem;
+  color: #0a1a2f;
+  margin-bottom: 40px;
+}
+
+/* Grid */
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cards */
+.solution-card {
+  background: rgb(195, 226, 109);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.solution-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Icon */
+.solution-card .icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+/* Title */
+.solution-card h3 {
+  font-size: 1.4rem;
+  color: #0a1a2f;
+  margin-bottom: 10px;
+}
+
+/* Text */
+.solution-card p {
+  color: #4a4a4a;
+  line-height: 1.5;
+}
+
 @media (max-width: 720px) {
     #map {
         margin-top: 80px; /* hauteur de la navbar mobile */
