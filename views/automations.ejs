@@ -3,5 +3,17 @@
 
 <%- include('../partials/header') %>
 
+<section class="gallery">
+<h2>Exemples de réalisations</h2>
+
+<div class="gallery-grid">
+    <% images.forEach(img => { %>
+    <img src="<%= img %>" alt="Réalisation domotique">
+    <% }) %>
+</div>
+</section>
+
+
+
 <script src="/js/menu.js"></script>
 <%- include('../partials/footer') %>
