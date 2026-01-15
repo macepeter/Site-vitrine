@@ -2,6 +2,56 @@
 <link rel="stylesheet" href="/css/about.css">
 
 <%- include('../partials/header') %>
+<h1>Formulaire de demandes</h1>
+<form method="post">
+<label for="genre">Vous êtes ?</label>
+<label>
+    <input type="radio" name="statut"> Madame
+</label>
+<label>
+    <input type="radio" name="statut"> Monsieur
+</label>
+</label>
+<label for="firstname">
+    <input type="text" name="Nom" placeholder="Votre nom...">
+</label>
+<label for="lastname">
+    <input type="text" name="Prénom" placeholder="Votre prénom...">
+</label>
+<label for="email">
+    <input type="email" name="Mail" placeholder="Entrez votre mail...">
+</label>
+<label for="number">
+    <input
+        type="tel"
+        name="telephone"
+        id="telephone"
+        placeholder="06 12 34 56 78"
+        pattern="^0[1-9](\s?\d{2}){4}$"
+        required
+    >
+</label>
+<label for="contact">Comment nous avez vous trouvé ?</label>
+<label>
+    <input type="radio" name="statut" aria-label="Web"> Web
+</label>
+<label>
+    <input type="radio" name="statut" aria-label="Réseaux sociaux"> Réseaux sociaux
+</label>
+<label>
+    <input type="radio" name="statut" aria-label="Prospectus"> Prospectus
+</label>
+<label>
+    <input type="radio" name="statut" aria-label="Bouche à oreille"> Bouche à oreille
+</label>
+<label>
+    <input type="checkbox" aria-label="Je suis d'accord avec l'envoie du formulaire"> Je suis d'accord avec l'envoie du Formulaire...
+</label>
+</label>
+<label for="message">
+    <textarea name="message" aria-label="Ecrivez nous votre message ici">"Ecrivez nous votre message ici"</textarea>
+</label>
+</form>
 
-
+<script src="/js/menu.js"></script>
 <%- include('../partials/footer') %>
