@@ -9,6 +9,16 @@ body {
     z-index: 3000;
     background: rgba(0, 0, 0, 0.0);
 }
+
+form {
+    display:grid;
+
+
+
+}
+
+
+
 @media (max-width: 720px) {
     #map {
         margin-top: 80px; /* hauteur de la navbar mobile */

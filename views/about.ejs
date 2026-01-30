@@ -2,55 +2,74 @@
 <link rel="stylesheet" href="/css/about.css">
 
 <%- include('../partials/header') %>
-<h1>Formulaire de demandes</h1>
-<form method="post">
-<label for="genre">Vous êtes ?</label>
-<label>
-    <input type="radio" name="statut"> Madame
-</label>
-<label>
-    <input type="radio" name="statut"> Monsieur
-</label>
-</label>
-<label for="firstname">
-    <input type="text" name="Nom" placeholder="Votre nom...">
-</label>
-<label for="lastname">
-    <input type="text" name="Prénom" placeholder="Votre prénom...">
-</label>
-<label for="email">
-    <input type="email" name="Mail" placeholder="Entrez votre mail...">
-</label>
-<label for="number">
-    <input
-        type="tel"
-        name="telephone"
-        id="telephone"
-        placeholder="06 12 34 56 78"
-        pattern="^0[1-9](\s?\d{2}){4}$"
-        required
-    >
-</label>
-<label for="contact">Comment nous avez vous trouvé ?</label>
-<label>
-    <input type="radio" name="statut" aria-label="Web"> Web
-</label>
-<label>
-    <input type="radio" name="statut" aria-label="Réseaux sociaux"> Réseaux sociaux
-</label>
-<label>
-    <input type="radio" name="statut" aria-label="Prospectus"> Prospectus
-</label>
-<label>
-    <input type="radio" name="statut" aria-label="Bouche à oreille"> Bouche à oreille
-</label>
-<label>
-    <input type="checkbox" aria-label="Je suis d'accord avec l'envoie du formulaire"> Je suis d'accord avec l'envoie du Formulaire...
-</label>
-</label>
-<label for="message">
-    <textarea name="message" aria-label="Ecrivez nous votre message ici">"Ecrivez nous votre message ici"</textarea>
-</label>
+
+<form method="post" id="form">
+    <h1>Formulaire de demandes</h1>
+
+    <!-- Civilité -->
+    <fieldset>
+        <legend>Vous êtes :</legend>
+        <label>
+            <input type="radio" name="civilite" value="madame" aria-label="Madame" required>
+            Madame
+        </label>
+        <label>
+            <input type="radio" name="civilite" value="monsieur" aria-label="Monsieur">
+            Monsieur
+        </label>
+    </fieldset>
+
+    <!-- Identité -->
+    <label>
+        Nom :
+        <input type="text" name="nom" placeholder="Votre nom..." aria-label="Nom" required>
+    </label>
+
+    <label>
+        Prénom :
+        <input type="text" name="prenom" placeholder="Votre prénom..." aria-label="Prénom" required>
+    </label>
+
+    <label>
+        Email :
+        <input type="email" name="email" placeholder="Entrez votre mail..." aria-label="Email" required>
+    </label>
+
+    <label>
+        Téléphone :
+        <input
+            type="tel"
+            name="telephone"
+            placeholder="06 12 34 56 78"
+            pattern="^0[1-9](\s?\d{2}){4}$"
+            required
+        >
+    </label>
+
+    <!-- Origine du contact -->
+    <fieldset>
+        <legend>Comment nous avez-vous trouvé ?</legend>
+        <label><input type="radio" name="origine" value="web" aria-label="Web"> Web</label>
+        <label><input type="radio" name="origine" value="reseaux" aria-label="Réseaux sociaux"> Réseaux sociaux</label>
+        <label><input type="radio" name="origine" value="prospectus" aria-label="Prospectus"> Prospectus</label>
+        <label><input type="radio" name="origine" value="bouche" aria-label="Bouche à oreille"> Bouche à oreille</label>
+    </fieldset>
+
+    <!-- Consentement -->
+    <label>
+        <input type="checkbox" name="consentement" aria-label="Consentement" required>
+        Je suis d'accord avec l'envoi du formulaire
+    </label>
+
+    <!-- Message -->
+    <label>
+        Message :
+        <textarea name="message" placeholder="Écrivez-nous ici..." required></textarea>
+    </label>
+
+    <!-- Bouton -->
+    <button type="submit">Valider</button>
+
 </form>
 
 <script src="/js/menu.js"></script>
