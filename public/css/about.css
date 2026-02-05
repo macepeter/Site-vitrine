@@ -10,12 +10,39 @@ body {
     background: rgba(0, 0, 0, 0.0);
 }
 
+h1 {
+    color: rgb(195, 226, 109);
+}
+
+label {
+    display: flex;
+    
+}
+
 form {
+    margin-top: 6.2rem;
     display:grid;
-
-
+    justify-content: center;
+    color: rgb(195, 226, 109);
 
 }
+fieldset {
+    border-radius: 1rem;
+    border-color: rgb(206, 176, 79);
+}
+button {
+    border-radius: 1rem;
+    color: rgb(195, 226, 109);
+    background-color: rgb(16, 156, 190);
+    margin-top: 1rem;
+    height: 2.5rem;
+}
+textarea {
+    width: 50%;
+    height: 3rem;
+
+}
+
 
 
 

@@ -24,6 +24,7 @@ app.use("/contact", contactRoutes);
 app.use("/about", aboutRoutes);
 app.use("/automations", automationsRoutes);
 
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

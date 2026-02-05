@@ -1,76 +1,74 @@
 <%- include('../partials/head') %>
-<link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/about.css">
 
-<%- include('../partials/header') %>
+    <%- include('../partials/header') %>
 
-<form method="post" id="form">
-    <h1>Formulaire de demandes</h1>
+        <form method="post" id="form">
+            <h1>Formulaire de demandes</h1>
 
-    <!-- Civilité -->
-    <fieldset>
-        <legend>Vous êtes :</legend>
-        <label>
-            <input type="radio" name="civilite" value="madame" aria-label="Madame" required>
-            Madame
-        </label>
-        <label>
-            <input type="radio" name="civilite" value="monsieur" aria-label="Monsieur">
-            Monsieur
-        </label>
-    </fieldset>
+            <!-- Civilité -->
+            <fieldset>
+                <legend>Vous êtes :</legend>
+                <label>
+                    <input type="radio" name="civilite" value="madame" aria-label="Madame" required>
+                    Madame
+                </label>
+                <label>
+                    <input type="radio" name="civilite" value="monsieur" aria-label="Monsieur">
+                    Monsieur
+                </label>
+            </fieldset>
 
-    <!-- Identité -->
-    <label>
-        Nom :
-        <input type="text" name="nom" placeholder="Votre nom..." aria-label="Nom" required>
-    </label>
+            <!-- Identité -->
+            <label>
+                Nom :
+                <input type="text" name="nom" placeholder="Votre nom..." aria-label="Nom" required>
+            </label>
 
-    <label>
-        Prénom :
-        <input type="text" name="prenom" placeholder="Votre prénom..." aria-label="Prénom" required>
-    </label>
+            <label>
+                Prénom :
+                <input type="text" name="prenom" placeholder="Votre prénom..." aria-label="Prénom" required>
+            </label>
 
-    <label>
-        Email :
-        <input type="email" name="email" placeholder="Entrez votre mail..." aria-label="Email" required>
-    </label>
+            <label>
+                Email :
+                <input type="email" name="email" placeholder="Entrez votre mail..." aria-label="Email" required>
+            </label>
 
-    <label>
-        Téléphone :
-        <input
-            type="tel"
-            name="telephone"
-            placeholder="06 12 34 56 78"
-            pattern="^0[1-9](\s?\d{2}){4}$"
-            required
-        >
-    </label>
+            <label>
+                Téléphone :
+                <input type="tel" name="telephone" placeholder="06 12 34 56 78" pattern="^0[1-9](\s?\d{2}){4}$"
+                    required>
+            </label>
 
-    <!-- Origine du contact -->
-    <fieldset>
-        <legend>Comment nous avez-vous trouvé ?</legend>
-        <label><input type="radio" name="origine" value="web" aria-label="Web"> Web</label>
-        <label><input type="radio" name="origine" value="reseaux" aria-label="Réseaux sociaux"> Réseaux sociaux</label>
-        <label><input type="radio" name="origine" value="prospectus" aria-label="Prospectus"> Prospectus</label>
-        <label><input type="radio" name="origine" value="bouche" aria-label="Bouche à oreille"> Bouche à oreille</label>
-    </fieldset>
+            <!-- Origine du contact -->
+            <fieldset>
+                <legend>Comment nous avez-vous trouvé ?</legend>
+                <label><input type="radio" name="origine" value="web" aria-label="Web"> Web</label>
+                <label><input type="radio" name="origine" value="reseaux" aria-label="Réseaux sociaux"> Réseaux
+                    sociaux</label>
+                <label><input type="radio" name="origine" value="prospectus" aria-label="Prospectus"> Prospectus</label>
+                <label><input type="radio" name="origine" value="bouche" aria-label="Bouche à oreille"> Bouche à
+                    oreille</label>
+            </fieldset>
 
-    <!-- Consentement -->
-    <label>
-        <input type="checkbox" name="consentement" aria-label="Consentement" required>
-        Je suis d'accord avec l'envoi du formulaire
-    </label>
+            <!-- Consentement -->
+            <label>
+                <input type="checkbox" name="consentement" aria-label="Consentement" required>
+                Je suis d'accord avec l'envoi du formulaire
+            </label>
 
-    <!-- Message -->
-    <label>
-        Message :
-        <textarea name="message" placeholder="Écrivez-nous ici..." required></textarea>
-    </label>
+            <!-- Message -->
+            <label>
+                Message :
+                <textarea name="" id="Message" placeholder="Écrivez-nous ici..." required></textarea>
+            </label>
 
-    <!-- Bouton -->
-    <button type="submit">Valider</button>
+            <!-- Bouton -->
+            <form onsubmit="event.preventDefault(); alert('Merci pour votre message');">
+                <button type="submit">Envoyer</button>
+            </form>
+        </form>
 
-</form>
-
-<script src="/js/menu.js"></script>
-<%- include('../partials/footer') %>
+        <script src="/js/menu.js"></script>
+        <%- include('../partials/footer') %>
