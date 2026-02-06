@@ -8,6 +8,7 @@ body {
     left: 0;
     z-index: 3000;
     background: rgba(0, 0, 0, 0.0);
+    /* pointer-events: none; */
 }
 
 h1 {
@@ -20,7 +21,7 @@ label {
 }
 
 form {
-    margin-top: 6.2rem;
+    margin-top: 5.2rem;
     display:grid;
     justify-content: center;
     color: rgb(195, 226, 109);
@@ -42,7 +43,6 @@ textarea {
     height: 3rem;
 
 }
-
 
 
 
