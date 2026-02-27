@@ -2,7 +2,7 @@ import express from "express";
 import mainRoutes from "./routes/main.routes.js";
 import servicesRoutes from "./routes/services.route.js"
 import contactRoutes from "./routes/contact.routes.js"
-import aboutRoutes from "./routes/about.routes.js"
+import formRoutes from "./routes/form.routes.js"
 import automationsRoutes from "./routes/automations.routes.js"
 
 const PORT = process.env.PORT || 3000;
@@ -17,11 +17,12 @@ app.set("views", "./views");
 
 app.use(express.static('public'));
 
+
 //Routes
 app.use("/", mainRoutes);
 app.use("/services", servicesRoutes);
 app.use("/contact", contactRoutes);
-app.use("/about", aboutRoutes);
+app.use("/form", formRoutes);
 app.use("/automations", automationsRoutes);
 
 

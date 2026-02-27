@@ -1,9 +1,9 @@
 <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/form.css">
 
     <%- include('../partials/header') %>
 
-        <form method="post" id="form">
+        <form method="post" action="/form" id="form">
             <h1>Formulaire de demandes</h1>
 
             <!-- Civilité -->
@@ -22,22 +22,22 @@
             <!-- Identité -->
             <label>
                 Nom :
-                <input type="text" name="nom" placeholder="Votre nom..." aria-label="Nom" required>
+                <input type="text" name="nom" id="info" placeholder="Votre nom..." aria-label="Nom" required>
             </label>
 
             <label>
                 Prénom :
-                <input type="text" name="prenom" placeholder="Votre prénom..." aria-label="Prénom" required>
+                <input type="text" name="prenom" id="info" placeholder="Votre prénom..." aria-label="Prénom" required>
             </label>
 
             <label>
                 Email :
-                <input type="email" name="email" placeholder="Entrez votre mail..." aria-label="Email" required>
+                <input type="email" name="email" id="info" placeholder="Entrez votre mail..." aria-label="Email" required>
             </label>
 
             <label>
                 Téléphone :
-                <input type="tel" name="telephone" placeholder="06 12 34 56 78" pattern="^0[1-9](\s?\d{2}){4}$"
+                <input type="tel" name="telephone" id="info" placeholder="06 12 34 56 78" pattern="^0[1-9](\s?\d{2}){4}$"
                     required>
             </label>
 
@@ -58,10 +58,9 @@
                 Je suis d'accord avec l'envoi du formulaire
             </label>
 
-            <!-- Message -->
-            <label>
-                Message :
-                <textarea name="" id="Message" placeholder="Écrivez-nous ici..." required></textarea>
+            <!-- Message -->         
+                
+                    <textarea name="message" id="Message" placeholder="Écrivez-nous ici..." required></textarea>
             </label>
 
             <!-- Bouton -->

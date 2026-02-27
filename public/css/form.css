@@ -14,9 +14,20 @@ body {
 h1 {
     color: rgb(195, 226, 109);
 }
+#info{
+    display: flex;    
+    justify-content: center;
+    background-color: rgba(113, 126, 106, 0.582);
+    color: black;
+    border-radius: 1rem;
+    font-weight: bold;    
 
+}
 label {
-    display: flex;
+    margin-top: auto;
+    display: wrap;
+    width: 100%;
+    color: rgb(202, 126, 11);
     
 }
 
@@ -39,8 +50,13 @@ button {
     height: 2.5rem;
 }
 textarea {
-    width: 50%;
+    background-color: rgba(113, 126, 106, 0.582);
+    width: auto;
     height: 3rem;
+    border-color: rgb(206, 176, 79);
+    border-radius: 1rem;
+    color: black;
+    font-weight: bold;
 
 }
 

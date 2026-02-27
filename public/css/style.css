@@ -86,6 +86,7 @@ body {
 .burger {
   display: none;
   flex-direction: column;
+  margin-left: auto; /* Force le burger à aller à droite */
   gap: 6px;
   cursor: pointer;
 }
