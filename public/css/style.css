@@ -1,14 +1,21 @@
 /* Reset de base */
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   color: white;
   overflow-x: hidden;
+  background: url('/img/stephan-bechert-yFV39g6AZ5o-unsplash.webp') center/cover no-repeat fixed;
+  display: flex;
+  flex-direction: column; /* IMPORTANT pour sticky footer */
 }
 
 /* NAVBAR */
 .navbar {
-  position: absolute; 
+  position: absolute;
   top: 0;
   left: 0;
   height: 120px;
@@ -19,17 +26,19 @@ body {
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
-  
 }
+
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 5px 0;
-    color: rgb(206, 176, 79);
-    height: 7rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  color: rgb(206, 176, 79);
+  height: 7rem;
+  margin-top: auto; /* pousse le footer en bas */
 }
+
 .navbar .logo {
   font-size: 1.5em;
   font-weight: bold;
@@ -44,7 +53,6 @@ body {
   z-index: 2000;
 }
 
-
 .navbar a {
   color: rgb(206, 176, 79);
   text-decoration: none;
@@ -53,22 +61,38 @@ body {
 
 /* HERO */
 .hero {
-  background: url('/img/stephan-bechert-yFV39g6AZ5o-unsplash.jpg') center/cover no-repeat;
   width: 100%;
-  padding-top: 120px; 
+  padding-top: 120px;
   box-sizing: border-box;
   text-align: center;
 }
 
 .hero-content {
-  background: rgba(34, 33, 33, 0.6);
   padding: 40px;
   width: 100%;
-  margin: 0;
-  border-radius: 0;
+  margin: 0 auto;
   box-sizing: border-box;
-  justify-content: center;
-  min-height: calc(100vh - 80px);
+  max-width: 900px;
+}
+
+/* DESCRIPTION */
+.description {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+}
+
+.description-content {
+  margin-top: 20px;
+  background-color: #00bfa6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 20px;
+  display: inline-block;
+  max-width: 900px;
 }
 
 /* CTA */
@@ -82,11 +106,12 @@ body {
   border-radius: 5px;
   font-weight: bold;
 }
-/* Bouton burger (caché sur desktop) */
+
+/* Bouton burger */
 .burger {
   display: none;
   flex-direction: column;
-  margin-left: auto; /* Force le burger à aller à droite */
+  margin-left: auto;
   gap: 6px;
   cursor: pointer;
 }
@@ -94,15 +119,12 @@ body {
 .burger span {
   width: 28px;
   height: 3px;
-  background: white;
+  background: rgb(206, 176, 79);
   border-radius: 2px;
 }
 
+/* MOBILE */
 @media (max-width: 720px) {
-    #map {
-        margin-top: 80px; /* hauteur de la navbar mobile */
-    }
-
 
   .navbar {
     padding: 10px 20px;
@@ -111,7 +133,7 @@ body {
 
   .navbar ul {
     gap: 10px;
-    display: none; /* on cache le menu */
+    display: none;
     flex-direction: column;
     background: rgba(0,0,0,0.9);
     position: absolute;
@@ -119,14 +141,14 @@ body {
     right: 0;
     width: 200px;
     padding: 20px;
-      }
+  }
 
   .navbar ul.active {
-    display: flex; /* affiché quand on clique */
+    display: flex;
   }
 
   .burger {
-    display: flex; /* on montre le burger */
+    display: flex;
   }
 
   .navbar .logo {
@@ -139,7 +161,7 @@ body {
 
   .hero-content {
     padding: 20px;
-    min-height: calc(100vh - 80px);
+    max-width: 90%;
   }
 
   h1 {
@@ -156,13 +178,8 @@ body {
   }
 }
 
+/* TABLETTE */
 @media (min-width: 721px) and (max-width: 1024px) {
-
-  /* #map {
-        margin-top: 120px;
-    } */
-
-
 
   .navbar {
     padding: 15px 30px;
@@ -171,7 +188,6 @@ body {
 
   .navbar ul {
     gap: 15px;
-
   }
 
   .hero {
@@ -180,7 +196,7 @@ body {
 
   .hero-content {
     padding: 30px;
-    min-height: calc(100vh - 100px);
+    max-width: 800px;
   }
 
   h1 {
@@ -192,6 +208,7 @@ body {
   }
 }
 
+/* DESKTOP */
 @media (min-width: 1025px) {
 
   .navbar {
@@ -205,7 +222,7 @@ body {
 
   .hero-content {
     padding: 40px;
-    min-height: calc(100vh - 120px);
+    max-width: 900px;
   }
 
   h1 {
@@ -219,6 +236,4 @@ body {
   .navbar ul {
     display: flex !important;
   }
-
-
 }
