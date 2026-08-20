@@ -1,20 +1,29 @@
+body {
+    background-color: rgba(10, 73, 99, 0.904);
+}
 /*css map leaflet*/
 #map { 
-    height: 18rem; 
+    height: 25rem; 
     margin-top: 6.2rem;
 }
 
 #communication {
     margin-top: 2rem;
     margin-bottom: 8rem;
-    color: black;
+    color: rgb(153, 32, 10);
     text-align: center;
-    
+    font-weight: bold;   
 
 }
-body {
-    background-color: rgba(10, 73, 99, 0.904);
+
+#communication li {
+    list-style: none;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: rgb(94, 16, 2);
+    
 }
+
 
 .navbar {
     position: absolute;

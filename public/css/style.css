@@ -34,7 +34,8 @@ body {
   width: 100%;
   text-align: center;
   padding: 5px 0;
-  color: rgb(206, 176, 79);
+  color: rgb(153, 32, 10);
+  font-weight: bold;
   height: 7rem;
   margin-top: auto; /* pousse le footer en bas */
 }

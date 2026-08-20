@@ -11,6 +11,18 @@ body {
     /* pointer-events: none; */
 }
 
+.form-container {
+    margin-top: 10rem;
+    border-radius: 1rem;
+    background-color: rgba(54, 61, 51, 0.780);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    margin-bottom: 10rem; 
+}
 h1 {
     color: rgb(195, 226, 109);
 }
@@ -18,7 +30,7 @@ h1 {
     display: flex;    
     justify-content: center;
     background-color: rgba(113, 126, 106, 0.582);
-    color: black;
+    color: rgb(253, 252, 252);
     border-radius: 1rem;
     font-weight: bold;    
 
@@ -28,8 +40,14 @@ label {
     display: wrap;
     width: 100%;
     color: rgb(202, 126, 11);
+
     
 }
+input {
+    height: 2rem;
+    border-radius: 1rem;
+    color: rgb(250, 249, 249); 
+}    
 
 form {
     margin-top: 5.2rem;
@@ -39,6 +57,7 @@ form {
 
 }
 fieldset {
+    background-color: rgba(254, 255, 253, 0.22);
     border-radius: 1rem;
     border-color: rgb(206, 176, 79);
 }
@@ -50,14 +69,28 @@ button {
     height: 2.5rem;
 }
 textarea {
-    background-color: rgba(113, 126, 106, 0.582);
+    background-color: rgba(254, 255, 253, 0.22);
     width: auto;
     height: 3rem;
     border-color: rgb(206, 176, 79);
     border-radius: 1rem;
-    color: black;
+    color: rgb(250, 249, 249);
     font-weight: bold;
 
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid rgb(206, 176, 79);
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    color: rgb(250, 249, 249);
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="tel"]::placeholder, textarea::placeholder {
+    color: rgb(250, 249, 249);
 }
 
 
